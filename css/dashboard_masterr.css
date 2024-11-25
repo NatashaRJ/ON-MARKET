@@ -1,0 +1,263 @@
+/* Resetando margem e padding para garantir que a centralização funcione corretamente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo as fontes e o estilo básico do corpo */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(165, 160, 160);  /* Cor de fundo suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-out; /* Animação de fade-in no carregamento */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Container de usuário no topo, alinhado à direita */
+.usuario {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    font-size: 16px;
+    background-color: #ff6600; /* Cor de fundo do cabeçalho */
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transform: perspective(1000px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: slideInFromTop 0.8s ease-out; /* Animação de entrada do usuário */
+}
+
+/* Animação de entrada do container do usuário */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilizando o link de logout */
+.usuario a {
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Suaviza a troca de cor */
+}
+
+/* Efeito hover na área do usuário (com 3D) */
+.usuario:hover {
+    transform: perspective(1000px) rotateY(10deg);
+    background-color: white; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.usuario a:hover {
+    color: #e65c00;
+}
+
+/* Centralizando o conteúdo */
+.conteudo {
+    text-align: center;
+    margin-top: 60px;
+    animation: fadeInContent 1s ease-out; /* Animação de fade-in para o conteúdo */
+}
+
+/* Animação de fade-in para o conteúdo */
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Cabeçalho principal */
+h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    animation: slideInFromLeft 1s ease-out; /* Animação de entrada do título */
+}
+
+/* Animação de entrada do título */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Parágrafo de boas-vindas */
+p {
+    font-size: 18px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    animation: slideInFromRight 1s ease-out; /* Animação de entrada do parágrafo */
+}
+
+/* Animação de entrada do parágrafo */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo para a logo (imagem) */
+img {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px; /* Bordas arredondadas para uma imagem mais estilosa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    animation: zoomIn 1s ease-out; /* Animação de zoom na logo */
+}
+
+/* Animação de zoom na imagem */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Efeito 3D na logo (imagem) */
+img:hover {
+    transform: rotateY(10deg) scale(1.1);
+    box-shadow: 0 8px 15px black;
+}
+
+/* Estilo do título secundário */
+h2 {
+    font-size: 28px;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+    animation: slideInFromLeft 1s ease-out; /* Animação de entrada do título secundário */
+}
+
+/* Lista de links de navegação */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Usando flexbox para alinhar os links horizontalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Adiciona espaço entre os links */
+}
+
+/* Cada item da lista (link) */
+ul li {
+    display: inline-block; /* Os itens serão dispostos lado a lado */
+    perspective: 1000px; /* Adiciona a perspectiva para cada link */
+}
+
+/* Estilo para os links */
+ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid #ff6600;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease-in-out;
+}
+
+/* Efeito de hover para os links */
+ul li a:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-5px) rotateY(10deg);
+}
+
+/* Estilo para as seções de "Acesso Comum" */
+h2, p {
+    color: black;
+    font-weight: normal;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .usuario {
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+    }
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    ul li a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .usuario {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    ul li a {
+        font-size: 14px;
+    }
+}

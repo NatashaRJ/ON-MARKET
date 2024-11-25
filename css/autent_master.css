@@ -1,0 +1,122 @@
+/* Resetando margem e padding para garantir que a centralização funcione corretamente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centralizando o conteúdo na tela */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(165, 160, 160); /* Cor de fundo suave */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para o formulário */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transform-style: preserve-3d;
+    animation: formAnimation 1s ease-out; /* Animação 3D ao carregar */
+    border: 2px solid #ff6600; /* Cor da borda */
+}
+
+/* Efeito de animação 3D para o formulário */
+@keyframes formAnimation {
+    0% {
+        transform: rotateX(0deg) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(360deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Estilo das labels */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="date"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao focar nos campos */
+input[type="text"]:focus,
+input[type="date"]:focus {
+    transform: translateY(-3px); /* Levanta o campo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilo do botão de envio */
+input[type="submit"] {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: black;
+    transform: translateY(-2px); /* Levanta o botão ao passar o mouse */
+}
+
+/* Efeito para o formulário ao ser carregado */
+form {
+    perspective: 1500px; /* Definindo o efeito de perspectiva */
+    animation: popIn 1s ease-out; /* Animação para o formulário */
+}
+
+/* Efeito de pop-in do formulário */
+@keyframes popIn {
+    0% {
+        transform: scale(0.8) rotateY(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+/* Definindo o estilo do título */
+h2 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Ajuste para o input de CEP */
+input[type="text"]#cep {
+    width: calc(50% - 12px); /* Ajuste para o tamanho do campo de CEP */
+    display: inline-block;
+}
+
+/* Quebra de linha entre o campo de CEP */
+input[type="text"]#cep + br {
+    display: inline-block;
+}

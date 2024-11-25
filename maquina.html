@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processador AMD Ryzen 7 5700X 3.4GHz - On Market</title>
+  <link rel="stylesheet" href="css/maquina.css">
+</head>
+
+  <body>
+     <!-- Cabeçalho -->
+     <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+      </div>
+      <h1 class="titulo">ON MARKET</h1>
+  
+      <nav class="menu-navegacao">
+        <ul class="barra-navegacao">
+  
+        <li class="botao-letra">
+                  <button onclick="aumentarLetra()">Aumentar</button> 
+  
+                  <button onclick="diminuirLetra()">Diminuir</button>
+                </li>
+  
+          <li><a href="index.html">Home</a></li>
+          <li><a href="favoritos.php">Favoritos</a></li>
+          <li>
+            <a href="produtos.php">Produtos</a>
+            <ul class="sub-menu">
+              <li><a href="destaque.html">Produtos Destaque</a></li>
+            </ul>
+          </li>
+          <li>
+          <a href="login.php">Login Perfil</a>
+            <ul class="sub-menu">
+              <li><a href="cadastro.php">Cadastre-se</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" onclick="toggleCart()"><img src="img/carrinho.png" alt="Carrinho" class="cart-icon"></a>
+          </li>
+          <li>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+          <img src="img/dark.png" alt="Modo Escuro" class="dark-mode-icon">
+        </button>
+      </nav>
+    </header>
+
+    <h2 align="center">Detalhes do Produto</h2>
+    <br>
+
+    <main>
+        <section class="about">
+            <center>
+                <img src="img/maquina.jpg" width="200" height="250" alt="maquina">
+            </center>
+            <p>Samsung Lava e Seca 11kg Branco WD11M4473PW - 127V
+              Capacidade de 11kg
+            </p>
+            <strong><h3>R$3.829,00</h3></strong>
+            <button onclick="addToCart('Maquina de Lava e Seca', 3829)">Adicionar ao Carrinho</button>
+        
+        
+        </section>
+      </main>
+
+  <div id="cart" class="cart">
+    <h2>Carrinho de Compras</h2>
+    <ul id="cart-items"></ul>
+    <button onclick="clearCart()">Limpar Carrinho</button>
+    <button onclick="toggleCart()">Fechar Carrinho</button>
+    <button id="pay-button">Pagar</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 ON MARKET. Todos os direitos reservados.</p>
+    <p>Entre em contato conosco: (21) 1234-5678</p>
+    <div class="footer-logo">
+      <img src="img/logo.png" alt="Logo">
+      <p>Preço bom sempre é ON!</p>
+    </div>
+  </footer>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/carregador.js"></script>
+  <script src="js/DPLUS.js"></script> 
+
+</body>
+
+</html>

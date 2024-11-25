@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ff6600;
+}
+
+.login-container {
+    width: 300px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efeito de sombra para dar profundidade */
+    transform: perspective(1000px) rotateX(5deg); /* Dá um efeito de profundidade ao container */
+    transition: all 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumenta a sombra quando o container é "hovered" */
+    transform: perspective(1000px) rotateX(0deg); /* Alinha o container em um eixo mais reto */
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #868585;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras internas para dar profundidade */
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #ff6600;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.8); /* Efeito de foco em 3D */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra no botão para efeito de profundidade */
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: black;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    transform: translateY(-3px); /* Dá um leve "pulo" ao botão */
+}
+
+button:active {
+    transform: translateY(1px); /* Efeito de pressão quando o botão é clicado */
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}

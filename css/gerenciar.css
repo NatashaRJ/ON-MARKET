@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ff6600;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: green;
+    box-shadow: 0 5px 15px black;
+    transform: perspective(1000px) rotateX(1deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+table:hover {
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+th {
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: white;
+}
+
+td:hover {
+    background-color: rgb(128, 119, 119);
+    transform: translateY(-2px);
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 15px 5px;
+    cursor: pointer;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0 4px 10px black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+td a {
+    color: blue;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+td a:hover {
+    color: blue;
+}
+
+form a {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: red;
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
