@@ -35,7 +35,7 @@ Facilitar o gerenciamento de produtos, usuários e categorias em um sistema web 
 ## Status do Projeto
 
 ✅ Concluído  
-🚧 Em desenvolvimento (marque conforme seu andamento real)
+
 
 ---
 
